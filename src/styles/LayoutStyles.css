@@ -1,0 +1,336 @@
+.main{
+    padding: 10px;
+    height: 100vh;
+    /* display: flex; */
+}
+
+.layout{
+    display: flex;
+}
+
+/* sidebar */
+
+.sidebar {
+    min-height: 100%;
+    width: 400px;
+    border-radius: 15px; /* Increased border-radius for a smoother look */
+    background-color: #352F44; /* Changed background color to a vibrant blue */
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8); /* Increased box shadow for emphasis */
+    margin-right: 20px;
+    color: #ecf0f1; /* Changed text color to a light gray for better contrast */
+    padding: 25px; /* Increased padding for better content spacing */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transitions for box shadow and scale */
+}
+
+/* Optional: Add transitions for smoother hover effects */
+
+
+
+
+/* Optional: Add a subtle gradient for a modern look */
+.sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, #3498db, #2980b9); /* Adjusted gradient for a smoother transition */
+    opacity: 0.7; /* Adjusted opacity for a subtle effect */
+    z-index: -1; /* Placed the gradient behind the content */
+    border-radius: 15px; /* Matched border-radius with the main element */
+}
+
+
+/* 
+sidebar */
+
+
+.content{
+    width: 100%;
+    height: 100%;
+}
+
+/* Header */
+
+.header {
+    height: 10vh;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(222, 212, 16, 0.7); /* Increased box shadow for emphasis */
+    background-color: #352F44; /* Changed background color to a vibrant green */
+    color: #ffffff; /* Set text color to white for better contrast */
+    padding: 20px; /* Added padding for better content spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease-in-out; /* Added transition for box shadow */
+}
+
+/* Optional: Add transitions for smoother hover effects */
+.header:hover {
+    box-shadow: 0 0 15px rgba(222, 212, 16, 0.9);
+    transform: scale(1.05); /* Adjusted box shadow on hover for emphasis */
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header a {
+    color: #e70c0c; /* Set link color to white for better contrast */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* Added transition for link color */
+}
+
+/* Optional: Add transitions for smoother hover effects on links */
+.header a:hover {
+    color: #f39c12; /* Changed link color on hover to a bright orange */
+}
+
+
+/* Header */
+
+/* BODY */
+
+.body {
+    height: 85vh;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(246, 7, 222, 0.8); /* Increased box shadow for a more pronounced effect */
+    background-color: #F5F5F5; /* Changed background color to a calming blue */
+    color: #ffffff; /* Set text color to white for better contrast */
+    padding: 30px; /* Increased padding for better content spacing */
+    border-radius: 15px; /* Increased border-radius for a smoother look */
+    position: relative; /* Relative positioning for absolute positioning of pseudo-element */
+    overflow: hidden; /* Hide overflow to prevent pseudo-element from causing scrolling */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transitions for box shadow and scale */
+}
+
+/* Optional: Add transitions for smoother hover effects */
+.body:hover {
+    box-shadow: 0 0 20px rgba(246, 7, 222, 0.9); /* Adjusted box shadow on hover for emphasis */
+    transform: scale(1.02); /* Slightly scale up on hover for a subtle effect */
+}
+
+/* Optional: Add a subtle gradient for a modern look */
+.body::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    bottom: -20%;
+    left: -20%;
+    background: linear-gradient(45deg, #3498db, #9b59b6); /* Gradient from blue to purple */
+    opacity: 0.5; /* Adjusted opacity for a subtle effect */
+    z-index: -1; /* Placed the gradient behind the content */
+    border-radius: 15px; /* Matched border-radius with the main element */
+    transition: opacity 0.3s ease-in-out; /* Added transition for opacity */
+}
+
+/* Optional: Add transitions for pseudo-element on hover */
+.body:hover::before {
+    opacity: 0.7; /* Adjusted opacity on hover for emphasis */
+}
+
+
+
+/* Body */
+
+.logo h6 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0px;
+    color: #3498db; /* Set text color to a calming blue */
+    transition: color 0.3s ease-in-out; /* Added transition for text color */
+
+    /* Animation */
+    animation: pulseAnimation 1s infinite alternate; /* Apply pulse animation infinitely */
+
+    /* Additional styling */
+    cursor: pointer; /* Add pointer cursor for better interactivity */
+}
+
+/* Hover effect */
+.logo h6:hover {
+    color: #e74c3c; /* Change text color on hover to a different color */
+}
+
+/* Define pulse animation */
+@keyframes pulseAnimation {
+    from {
+        transform: scale(1); /* Initial scale */
+    }
+    to {
+        transform: scale(1.1); /* Slightly larger scale */
+    }
+}
+
+
+/* General styling for the menu */
+.menu {
+    margin-top: 5px;
+}
+
+.menu-item {
+    margin-top: 30px;
+}
+
+.menu-item a {
+    color: rgb(249, 245, 245);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out; /* Added transition for text color */
+    display: inline-block;
+    
+}
+
+.menu-item i {
+    font-size: 1.2rem;
+    margin: 0 15px;
+    display: inline-block;
+}
+
+/* Hover effect for menu items */
+.menu-item:hover a,
+.menu-item:hover i {
+    color: #3498db; /* Change text color on hover to a different color */
+}
+
+
+.active {
+    background-color: #F5F5F5;
+    
+    transition: background-color 0.3s ease-in-out; /* Added transition for background color */
+}
+.active1:hover{
+    background-color: rgb(251, 251, 247);
+    
+}
+
+.active1 {
+    padding: 10px;
+}
+
+.active a,
+.active i {
+    color: rgb(227, 10, 10);
+    transition: color 0.3s ease-in-out; /* Added transition for text color */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: flex-end;
+    margin: 0 15px;
+}
+
+.header-content i {
+    margin-right: 25px;
+    font-size: 1.2rem;
+    transition: margin-right 0.3s ease-in-out; /* Added transition for margin-right */
+}
+
+.header-content a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: blue;
+    margin: 0 10px;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out; /* Added transition for text color */
+}
+
+/* Hover effect for menu items */
+.header-content a:hover,
+.header-content i:hover {
+    color: rgb(227, 10, 10); /* Change text color on hover */
+}
+
+
+
+
+/* styles.css */
+.text-center {
+    text-align: center;
+    color: #333;
+    font-size: 40px; /* Set the desired font size */
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.text-center:hover {
+    color: #FFFF00;
+    transform: scale(1.1);
+}
+
+.text-center::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: #FFFF00;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-center:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* styles.css */
+.appointments-title {
+    text-align: center;
+    color: #d3db34; /* Set your desired color */
+    font-size: 24px; /* Set your desired font size */
+    transition: color 0.3s ease-in-out; /* Add transition for color change on hover */
+    /* Add any other styles as needed */
+}
+
+.appointments-title:hover {
+    color: #cc462e; /* Change text color on hover */
+}
+
+/* styles.css */
+.p-3.text-center {
+    padding: 1rem; /* Set your desired padding */
+    text-align: center;
+    background-color: #3fdb34; /* Set your desired background color */
+    color: #ffffff; /* Set your desired text color */
+    transition: background-color 0.3s ease-in-out; /* Add transition for background color change on hover */
+    /* Add any other styles as needed */
+}
+
+.p-3.text-center:hover {
+    background-color: #2ecc71; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover for a subtle effect */
+}
+
+/* styles.css */
+.card-header {
+    padding: 1rem;
+    background-color: #3498db;
+    color: #ffffff;
+    border-radius: 8px;
+    width: 350px; /* Set the desired width */
+    height: 100px; /* Set the desired height */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.card-header:hover {
+    background-color: #2ecc71; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+    transform: translateY(-3px); /* Move the element up slightly on hover */
+}
+
+.appointments-title {
+    color: #3498db; /* Set the desired text color */
+    transition: color 0.3s ease-in-out; /* Add transition for hover effect on color change */
+  
+    /* Optional: Add other styling properties */
+  }
+  
+.appointments-title:hover {
+    color: #e74c3c; /* Set the desired text color on hover */
+    /* Additional styling for hover effect */
+}

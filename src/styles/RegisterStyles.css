@@ -1,0 +1,50 @@
+/* formStyles.css */
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f7f6f4; /* Changed background color */
+    overflow: hidden; /* Hide overflowing box-shadow during animations */
+}
+
+.register-form {
+    border: 1px solid #ccc; /* Changed border color */
+    padding: 30px;
+    background-color: #40F8FF; /* Changed background color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+    max-width: 400px; /* Set a maximum width for better responsiveness */
+    width: 100%;
+    transform-origin: center center; /* Set the transform origin for animations */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transitions for a subtle effect */
+}
+
+/* Shake animation on hover */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.form-container:hover .register-form {
+    animation: shake 0.5s ease-in-out; /* Apply shake animation on hover */
+    transform: scale(1.05); /* Optionally scale up on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Optionally increase box shadow on hover */
+}
+
+/* Optional: Add focus styles for form elements */
+.register-form input:focus,
+.register-form button:focus {
+    outline: none;
+    border-color: #1abc9c; /* Adjusted border color on focus */
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.5); /* Added box shadow on focus */
+    transform: scale(1.02); /* Slightly scale up on focus */
+}
